@@ -1,0 +1,28 @@
+- id: "1641367954937"
+  alias: Posli data
+  description: ""
+  trigger:
+    - minutes: /30
+      platform: time_pattern
+  condition: []
+  action:
+    - service: notify.filenotify
+      data_template:
+        message:
+          "{{ states.input_text.username }};{{ states.input_text.password }};{{
+          states.input_number.tempidle }};{{ states.input_number.tempactive }};"
+  mode: single
+- id: "1641911584302"
+  alias: Predelej sensor
+  description: ""
+  trigger:
+    - platform: state
+      entity_id: sensor.temperature
+  condition: []
+  action:
+    - service: climate.set_temperature
+      entity_id:
+        - climate.ucebna
+      data_template:
+        temperature: "{{ states('sensor.temperature') | float }}"
+  mode: single

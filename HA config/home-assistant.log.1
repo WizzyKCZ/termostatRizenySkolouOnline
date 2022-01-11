@@ -1,0 +1,45 @@
+2022-01-11 15:47:32 ERROR (MainThread) [homeassistant.components.file.sensor] '/config/test.csv' is not an allowed directory
+2022-01-11 15:51:32 ERROR (SyncWorker_4) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:51:32 WARNING (MainThread) [homeassistant.helpers.template] Template warning: 'float' got invalid input 'unknown' when rendering template '{{ states('sensor.temperature') | float }}' but no default was specified. Currently 'float' will return '0', however this template will fail to render in Home Assistant core 2022.1
+2022-01-11 15:52:02 ERROR (SyncWorker_3) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:52:32 ERROR (SyncWorker_1) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:53:02 ERROR (SyncWorker_5) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:53:32 ERROR (SyncWorker_3) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:54:02 ERROR (SyncWorker_5) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:54:32 ERROR (SyncWorker_3) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:55:02 ERROR (SyncWorker_4) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:55:32 ERROR (SyncWorker_5) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:56:02 ERROR (SyncWorker_3) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:56:32 ERROR (SyncWorker_4) [homeassistant.helpers.template] Template variable error: 'value_json' is undefined when rendering '{{ value_json.temperature }}'
+2022-01-11 15:57:02 WARNING (SyncWorker_5) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 15:57:32 WARNING (SyncWorker_3) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 15:58:02 WARNING (SyncWorker_4) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 15:58:32 WARNING (SyncWorker_5) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 15:59:02 WARNING (SyncWorker_3) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 15:59:32 WARNING (SyncWorker_4) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 16:00:02 WARNING (SyncWorker_3) [homeassistant.components.file.sensor] File or data not present at the moment: ofile.csv
+2022-01-11 16:03:52 ERROR (MainThread) [homeassistant.components.hassio] The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+2022-01-11 16:03:52 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [140290706845808] The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 185, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1495, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1530, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/hassio/__init__.py", line 599, in async_handle_core_service
+    raise HomeAssistantError(
+homeassistant.exceptions.HomeAssistantError: The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+2022-01-11 16:04:12 ERROR (MainThread) [homeassistant.components.hassio] The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+2022-01-11 16:04:12 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection] [140290706845808] The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+Traceback (most recent call last):
+  File "/usr/src/homeassistant/homeassistant/components/websocket_api/commands.py", line 185, in handle_call_service
+    await hass.services.async_call(
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1495, in async_call
+    task.result()
+  File "/usr/src/homeassistant/homeassistant/core.py", line 1530, in _execute_service
+    await handler.job.target(service_call)
+  File "/usr/src/homeassistant/homeassistant/components/hassio/__init__.py", line 599, in async_handle_core_service
+    raise HomeAssistantError(
+homeassistant.exceptions.HomeAssistantError: The system cannot restart because the configuration is not valid: Not a directory @ data['allowlist_external_dirs'][1]
+2022-01-11 16:04:42 ERROR (MainThread) [homeassistant.components.hassio.handler] Client error on /homeassistant/restart request Server disconnected
